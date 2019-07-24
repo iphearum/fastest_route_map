@@ -55,15 +55,23 @@ def goto(request):
     return render(request, 'core/home.html', {})
 
 def api(request):
-    response = requests.get('https://routing.openstreetmap.de/routed-bike/route/v1/driving/104.8912,11.5684;104.8834,11.504?overview=false&geometries=polyline&steps=true')
-    getdata = response.json()
+    # response = requests.get('https://routing.openstreetmap.de/routed-bike/route/v1/driving/104.8912,11.5684;104.8834,11.504?overview=false&geometries=polyline&steps=true')
+    # getdata = response.json()
 
-    data = {
+    # data = {
 
-    }
-    return data
+    # }
+    return render(request, 'core/draw_map.html')
 
 
 # https://routing.openstreetmap.de/routed-bike/route/v1/driving/104.8912,11.5684;104.8834,11.504?overview=false&geometries=polyline&steps=true
 
 # https://graphhopper.com/api/1/route?vehicle=car&locale=en-US&key=LijBPDQGfu7Iiq80w3HzwB4RUDJbMbhs6BU0dEnn&ch.disable=true&elevation=false&instructions=true&point=11.5684%2C104.8912&point=11.504%2C104.8834
+
+# openstreetmap
+# 11.5684, 104.8912    to  11.5040, 104.8834  map 11.5362, 104.8875
+# https://www.openstreetmap.org/directions?engine=fossgis_osrm_bike&route=11.5684%2C104.8912%3B11.5040%2C104.8834#map=14/11.5362/104.8875
+
+# google
+# 11.5042044,104.8839082 to 11.5737702,104.8932019
+# https://www.google.com/maps/dir/11.5684,104.8912/11.5040,104.8834/@11.5362,104.8875,12z/data=!4m2!4m1!3e0
