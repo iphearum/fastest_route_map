@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>FastRoad</title>
+    <style type="text/css">
+      body {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://github.com/sibtc/restful-apis-example">
+    <header>
+      <h1 style="margin-bottom: 0">Filter Road Map</h1>
+      <a href="{% url 'home' %}">home</a> ~ 
+      <a href="{% url 'home' %}">Filter Route Road</a>
+    </header>
+    <hr>
+    {% block content %}
+    {% endblock %}
+    <hr>
+  </body>
+</html>
