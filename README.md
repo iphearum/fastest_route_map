@@ -1,4 +1,4 @@
-# This project make for create the route to find which route that we can go direction faster than other route
+This project make for create the route to find which route that we can go direction faster than other route
 
 ## Create virtualenvs
 $ mkvirtualenv py1(name_of_virtualenv)
