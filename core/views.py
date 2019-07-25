@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.conf import settings
-import requests
+from urllib.request import urlopen
+import requests,json
 # from .forms import DictionaryForm
 
 # def home(request):
@@ -90,19 +91,29 @@ def request_to_api(request):
 
 #just test draw map
 def test_api(request): 
-    response = requests.get("https://routing.openstreetmap.de/routed-bike/route/v1/driving/104.8834,11.504;104.8912,11.5684?overview=false&geometries=polyline&steps=true")
+    # response = requests.get("https://routing.openstreetmap.de/routed-bike/route/v1/driving/104.8834,11.504;104.8912,11.5684?overview=false&geometries=polyline&steps=true")
+    response = requests.get("http://localhost/py/data/general.json")
     json_data = response.json()
-    steps = json_data['routes'][0]['legs'][0]
-    # step = json_data['routes'][0]['legs'][0]['steps']
-    # new_data = []
-    # n=0
-    # for data in step:
-    #     new_data = step[n]['intersections']
-    #     n=+1
-    context = {
-        'intersections': json_data['routes'][0]['legs'][0]
-    }
-    return render(request, 'core/test_drawing.html', context)
+    steps = json_data['routes'][0]['legs'][0]['steps']
+    new_data = []
+    for step in steps:
+        intersections = step['intersections']
+        for intersection in intersections:
+            locations = intersection['location']
+            for location in locations:
+                lat=location
+                for location in locations:
+                    if location != lat:
+                        lng = location
+            new_data.append('{lat:'+str(lat)+',lng:'+str(lng)+'}')
+        maneuver = step['maneuver']
+    a = '['
+    fullStr = ','.join(new_data) # convert list to string
+    b = ']'
+    new_data = a+fullStr+b #new data is a string
+    # please convert string to json data by using javascript <<json.parse(new_data)>>
+    print(new_data)
+    return render(request, 'core/test_drawing.html')
 
 
 # Link = https://www.openstreetmap.org/directions?engine=fossgis_osrm_bike&route=11.5684%2C104.8912%3B11.5040%2C104.8834#map=14/11.5362/104.8875
