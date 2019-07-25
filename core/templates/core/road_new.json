@@ -1,0 +1,107 @@
+{
+    "distance": 1726.4,
+    "duration": 410.5,
+    "summary": "ផ្លូវព្រៃស, ផ្លូវ ចំការដូង (២១៧)",
+    "weight": 410.5,
+    "steps": [
+        {
+            "intersections": [],
+            "driving_side": "right",
+            "geometry": "g{eeAa`d_SaBp@",
+            "mode": "cycling",
+            "duration": 23.4,
+            "maneuver": {
+                "bearing_after": 333,
+                "type": "depart",
+                "modifier": "straight",
+                "bearing_before": 0,
+                "location": [
+                    104.883372,
+                    11.504037
+                ]
+            },
+            "weight": 18.9,
+            "distance": 61.3,
+            "name": ""
+        },
+        {
+            "intersections": [],
+            "driving_side": "right",
+            "geometry": "i~eeAo~c_SaB}D{CiHO_@Yq@IS_@{@[u@KUKWu@gBUg@o@{Aq@aBYo@gAiC_@_Ae@gAc@cA_A{BCU",
+            "mode": "cycling",
+            "duration": 237.2,
+            "maneuver": {
+                "bearing_after": 61,
+                "type": "turn",
+                "modifier": "right",
+                "bearing_before": 331,
+                "location": [
+                    104.883116,
+                    11.504528
+                ]
+            },
+            "weight": 237.2,
+            "distance": 998.2,
+            "name": "ផ្លូវព្រៃស"
+        },
+        {
+            "intersections": [],
+            "driving_side": "right",
+            "geometry": "mxfeAcqe_SkH|@}APe@FwH~@I@}APyARmAL_@FK@qBT",
+            "mode": "cycling",
+            "duration": 149.9,
+            "maneuver": {
+                "bearing_after": 347,
+                "type": "turn",
+                "modifier": "left",
+                "bearing_before": 78,
+                "location": [
+                    104.891216,
+                    11.508707
+                ]
+            },
+            "ref": "20",
+            "weight": 149.9,
+            "distance": 666.1,
+            "name": "ផ្លូវ ចំការដូង (២១៧)"
+        },
+        {
+            "intersections": [],
+            "driving_side": "right",
+            "geometry": "c}geAuie_S",
+            "mode": "cycling",
+            "duration": 0,
+            "maneuver": {
+                "bearing_after": 0,
+                "location": [
+                    104.890025,
+                    11.514581
+                ],
+                "bearing_before": 349,
+                "type": "arrive"
+            },
+            "ref": "20",
+            "weight": 0,
+            "distance": 0,
+            "name": "ផ្លូវ ចំការដូង (២១៧)"
+        }
+    ],
+    "waypoints": [
+        {
+            "hint": "BIgWhjGIFoYNAQAAAgAAAAAAAAAAAAAAtH_gQgXeOz8AAAAAAAAAAA0BAAACAAAAAAAAAAAAAAC8DwAAsmRABqiJrwDIZEAGgImvAAAALw-U5GPI",
+            "name": "",
+            "location": [
+                104.883378,
+                11.50404
+            ]
+        },
+        {
+            "hint": "tGMZgIaTFoYkAAAAkQAAAAAAAAAAAAAAPb-BQMsigEIAAAAAAAAAACQAAACRAAAAAAAAAAAAAAC8DwAAqX5ABtWyrwCkfkAG1LKvAAAAjwqU5GPI",
+            "name": "ផ្លូវ ចំការដូង (២១៧)",
+            "location": [
+                104.890025,
+                11.514581
+            ]
+        }
+    ]
+}

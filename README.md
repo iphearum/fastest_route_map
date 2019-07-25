@@ -11,3 +11,5 @@ $ python manage.py migrate
 
 ## Host to server local
 $ python manage.py runserver
+
+API google key: AIzaSyCtmW37LvaY_hYcGTLNe86ZBD5g9ntdXWg

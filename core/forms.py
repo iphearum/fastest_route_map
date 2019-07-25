@@ -1,24 +1,17 @@
-from django import forms
-from django.conf import settings
-import requests
+from django.shortcuts import render, redirect
 
-class DictionaryForm(forms.Form):
-    word = forms.CharField(max_length=100)
+# class ApiRequest(forms.Form):
+#     template_name = 'core/send_request.html'
+    
+#     def get(self, request):
+#         form = ApiRequest()
+#         return render(request, self.template_name, {'form':form})
 
-    def search(self):
-        result = {}
-        word = self.cleaned_data['word']
-        endpoint = 'https://od-api.oxforddictionaries.com/api/v1/entries/{source_lang}/{word_id}'
-        url = endpoint.format(source_lang='en', word_id=word)
-        headers = {'app_id': settings.OXFORD_APP_ID, 'app_key': settings.OXFORD_APP_KEY}
-        response = requests.get(url, headers=headers)
-        if response.status_code == 200:  # SUCCESS
-            result = response.json()
-            result['success'] = True
-        else:
-            result['success'] = False
-            if response.status_code == 404:  # NOT FOUND
-                result['message'] = 'No entry found for "%s"' % word
-            else:
-                result['message'] = 'The Oxford API is not available at the moment. Please try again later.'
-        return result
+#     def post(self,request):
+#         form = ApiRequest(request.POST)
+#         if form.is_valid():
+#             text = clean_data['post']
+#             form = ApiRequest()
+#             return redirect('home:home')
+#         args = {'form':form, 'text':text}
+#         return render(request, 'core/get_request.html', args)
