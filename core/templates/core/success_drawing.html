@@ -42,13 +42,7 @@
         });
 
 
-        var flightPlanCoordinates = [
-          startpoint,
-          {lat: 11.50452, lng: 104.88312},
-          {lat: 11.505024, lng: 104.88407},
-          {lat: 11.508707, lng: 104.891216},
-          endpoint,
-        ];
+        var flightPlanCoordinates = {{ map }};
         var flightPath = new google.maps.Polyline({
           path: flightPlanCoordinates,
           geodesic: true,

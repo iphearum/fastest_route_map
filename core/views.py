@@ -85,13 +85,15 @@ def send_request(request):
  #get api after send request
 def request_to_api(request):
     request_from = '104.8834,11.504'    # lng, lat
-    request_end = '104.88406,11.50503'  # lng, lat
+    request_end = '104.8834,11.504'  # lng, lat
     response = requests.get('https://routing.openstreetmap.de/routed-bike/route/v1/driving/'+request_from+';'+request_end+'?overview=false&geometries=polyline&steps=true')
     return render(request, 'core/request_api.html')
 
 #just test draw map
-def test_api(request): 
-    # response = requests.get("https://routing.openstreetmap.de/routed-bike/route/v1/driving/104.8834,11.504;104.8912,11.5684?overview=false&geometries=polyline&steps=true")
+def test_api(request):
+    request_from = '104.8834,11.504'    # lng, lat
+    request_end = '104.88406,11.50503'  # lng, lat
+    # response = requests.get('https://routing.openstreetmap.de/routed-bike/route/v1/driving/'+request_from+';'+request_end+'?overview=false&geometries=polyline&steps=true')
     response = requests.get("http://localhost/py/data/general.json")
     json_data = response.json()
     steps = json_data['routes'][0]['legs'][0]['steps']
@@ -112,8 +114,13 @@ def test_api(request):
     b = ']'
     new_data = a+fullStr+b #new data is a string
     # please convert string to json data by using javascript <<json.parse(new_data)>>
-    print(new_data)
-    return render(request, 'core/test_drawing.html')
+    # print(new_data)
+    context={
+        'request_from':request_from,
+        'request_end':request_end,
+        'map':new_data
+    }
+    return render(request, 'core/success_drawing.html',context)
 
 
 # Link = https://www.openstreetmap.org/directions?engine=fossgis_osrm_bike&route=11.5684%2C104.8912%3B11.5040%2C104.8834#map=14/11.5362/104.8875
