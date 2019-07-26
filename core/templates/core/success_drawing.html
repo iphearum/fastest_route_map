@@ -42,7 +42,7 @@
         });
 
 
-        var flightPlanCoordinates = {{ map }};
+        var flightPlanCoordinates = [{{ map }}];
         var flightPath = new google.maps.Polyline({
           path: flightPlanCoordinates,
           geodesic: true,
