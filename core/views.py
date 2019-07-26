@@ -3,17 +3,16 @@ from django.http import HttpResponse
 from django.conf import settings
 from urllib.request import urlopen
 import requests,json
+
 # view_request
 # view page request
-def ViewSendRequest(request):
-    return render(request,'core/send_request.html')
-# show location when get the api
-def get_location(request): 
-    return render(request, 'core/getDirection.html')
-def success_drawing(request): 
-    return render(request, 'core/success_drawing.html')
-
-
+class Route:
+    def ViewSendRequest(request):
+        return render(request,'core/send_request.html')
+    def get_location(request): 
+        return render(request, 'core/getDirection.html')
+    def success_drawing(request): 
+        return render(request, 'core/success_drawing.html')
 
 # get_request
 # home page
@@ -88,25 +87,88 @@ def test_api(request):
     new_data = fullStr
     # print(new_data)
 
-    #define waypoint
-    way_route = []
-    for waypoint in waypoints:
-        locations = waypoint['location']
-        for location in locations:
-            lat=location
-            for location in locations:
-                if location != lat:
-                    lng = location
-            way_route.append('{lat:'+str(lat)+',lng:'+str(lng)+'}')
-    new_way_route = ','.join(way_route) # convert list to string
-    way_route = new_way_route
-    print(way_route)
-
     # offer data
     context={
         'map':new_data
     }
     return render(request, 'core/success_drawing.html',context)
 
-# Link = https://www.openstreetmap.org/directions?engine=fossgis_osrm_bike&route=11.5684%2C104.8912%3B11.5040%2C104.8834#map=14/11.5362/104.8875
-# API 1 = https://routing.openstreetmap.de/routed-bike/route/v1/driving/104.8912,11.5684;104.8834,11.504?overview=false&geometries=polyline&steps=true
+
+
+
+# globle variable
+new_data = []
+way_route = []
+json_data = ''
+class LinkRequest(Define):
+    def __init__(self, start_point, end_point):
+        Define.__init__(self, start_point, end_point)
+        self.start_point = start_point
+        self.end_point = end_point
+
+    def get_route(self):
+        global new_data
+        global json_data
+        response = requests.get('https://routing.openstreetmap.de/routed-bike/route/v1/driving/'+self.start_point+';'+self.end_point+'?overview=false&geometries=polyline&steps=true')
+        json_data = response.json()
+        steps = json_data['routes'][0]['legs'][0]['steps']
+        for step in steps:
+            intersections = step['intersections']
+            for intersection in intersections:
+                locations = intersection['location']
+                for location in locations:
+                    lat=location
+                    for location in locations:
+                        if location != lat:
+                            lng = location
+                new_data.append('{lat:'+str(lat)+',lng:'+str(lng)+'}')
+            maneuver = step['maneuver']
+        fullStr = ','.join(new_data) # convert list to string
+        new_data = fullStr
+        # offer data
+        context={
+            'map':new_data
+        }
+        return render(self, 'core/success_drawing.html',context)
+    
+    def get_direction(self):
+        global way_route
+        waypoints = json_data['waypoints']
+        for waypoint in waypoints:
+            routes = waypoint['location']
+            for location in routes:
+                lat=location
+                for location in routes:
+                    if location != lat:
+                        lng = location
+                way_route.append('{lat:'+str(lat)+',lng:'+str(lng)+'}')
+        new_way_route = ','.join(way_route) # convert list to string
+        way_route = new_way_route
+        print(way_route)
+
+
+class Define:
+    def __init__(self, start_point, end_point):
+        self.start_point = start_point
+        self.end_point = end_point
+
+    def index(self):
+        response = requests.get('http://api.ipstack.com/103.216.51.117?access_key=c3ae01b20017a4dc59fa423101f5fe05')
+        geodata = response.json()
+        context = {
+            'ip': geodata['ip'],
+            'country': geodata['country_name'],
+            'latitude': geodata.get('latitude', ''),
+            'longitude': geodata.get('longitude', ''),
+        }
+        return render(self, 'core/home.html', context)
+
+    def define(self):
+        # code
+        context={
+            'start':self.start_point,
+            'end':self.end_point
+        }
+        return render(self,'core/index.html',context)
+
+    
