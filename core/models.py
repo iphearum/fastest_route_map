@@ -33,32 +33,3 @@ class Define(models.Model):
             'end':self.end_point
         }
         return render(self,'core/index.html',context)
- 
-class PictureWidget(forms.widgets.Widget):
-    def render(self, name, value, attrs=None):
-        if str(value) == '':
-            html1 = "<img id='id_image' style='display:block' class='rounded float-left d-block'/>"
-        else:
-            html1 = "<img id='id_image' style='display:block' class='rounded float-left d-block' src='" + settings.MEDIA_URL + str(value) + "'/>"
-        return mark_safe(html1)
-
-class MyForm(forms.ModelForm):
-
-    image_container = forms.CharField(required=False, widget=forms.HiddenInput())
-    class Meta:
-        model = MYMODEL
-        fields = '__all__'
-        widgets = {
-            'image': PictureWidget(),
-        }
-    def save(self, commit=True):
-        # check image_container data
-        self.instance.image.delete(False)
-        imgdata = self.cleaned_data['image_container'].split(',')
-        try:
-            ftype = imgdata[0].split(';')[0].split('/')[1]
-            fname = slugify(self.instance.title)
-            self.instance.image.save('path/%s.%s' % (fname, ftype), ContentFile(imgdata[1].decode("base64")))
-        except:
-            pass
-        return super(MyForm, self).save(commit=commit)

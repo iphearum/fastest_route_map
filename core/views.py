@@ -100,7 +100,7 @@ def test_api(request):
 new_data = []
 way_route = []
 json_data = ''
-class LinkRequest(Define):
+class LinkRequest:
     def __init__(self, start_point, end_point):
         Define.__init__(self, start_point, end_point)
         self.start_point = start_point
@@ -147,7 +147,7 @@ class LinkRequest(Define):
         print(way_route)
 
 
-class Define:
+class Defines:
     def __init__(self, start_point, end_point):
         self.start_point = start_point
         self.end_point = end_point
