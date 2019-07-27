@@ -114,7 +114,7 @@ def test_api(request):
     b = ']'
     new_data = a+fullStr+b #new data is a string
     # please convert string to json data by using javascript <<json.parse(new_data)>>
-    # print(new_data)
+    # print(new_data)sj
     context={
         'request_from':request_from,
         'request_end':request_end,
