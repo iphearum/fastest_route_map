@@ -84,12 +84,7 @@ def test_api(request):
             new_data.append('{lat:'+str(lat)+',lng:'+str(lng)+'}')
         maneuver = step['maneuver']
     fullStr = ','.join(new_data) # convert list to string
-<<<<<<< HEAD
-    b = ']'
-    new_data = a+fullStr+b #new data is a string
-    # please convert string to json data by using javascript <<json.parse(new_data)>>
-    # print(new_data)sj
-=======
+    # new_data = a+fullStr+b #new data is a string
     new_data = fullStr
     # print(new_data)
 
@@ -97,7 +92,7 @@ def test_api(request):
     end_point = json_data['waypoints'][1]
 
     # offer data
->>>>>>> d78d56b7d0ed6c9313be0806769fcc64725038d2
+# >>>>>>> d78d56b7d0ed6c9313be0806769fcc64725038d2
     context={
         'map':new_data,
         'lat_s':start_point['location'][0],
