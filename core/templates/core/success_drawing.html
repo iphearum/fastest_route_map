@@ -1,61 +1,62 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>Simple Polylines</title>
     <style>
-      #map {
-        height: 100%;
-      }
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
+        #map {
+            height: 100%;
+        }
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="map"></div>
     <script>
-      function initMap() {
-        var startpoint = {lat: 11.504037, lng: 104.883372}
-        var center = {lat: 11.5040, lng: 104.8912}
-        var endpoint = {lat: 11.514581, lng: 104.890025}
+        function initMap() {
+            var startpoint = {lat: 11.504037, lng: 104.883372}
+            var center = {lat: 11.5040,lng: 104.8912}
+            var endpoint = {lat: 11.514581,lng: 104.890025}
 
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 14,
-          center: center,
-          mapTypeId: 'terrain',
-        });
-        var marker_startpoint = new google.maps.Marker({
-          position: startpoint,
-          map: map,
-          title: 'Your current location'
-        });
-        var marker_endpoint = new google.maps.Marker({
-          position: endpoint,
-          map: map,
-          draggable: true,
-          animation: google.maps.Animation.DROP,
-          title: 'Arrival'
-        });
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 14,
+                center: center,
+                mapTypeId: 'terrain',
+            });
+            var marker_startpoint = new google.maps.Marker({
+                position: startpoint,
+                map: map,
+                title: 'Your current location'
+            });
+            var marker_endpoint = new google.maps.Marker({
+                position: endpoint,
+                map: map,
+                draggable: true,
+                animation: google.maps.Animation.DROP,
+                title: 'Arrival'
+            });
+            var flightPlanCoordinates = [{{map}}];
+            var flightPath = new google.maps.Polyline({
+                path: flightPlanCoordinates,
+                geodesic: true,
+                strokeColor: '#FF0000',
+                strokeOpacity: 1.0,
+                strokeWeight: 2
+            });
 
-
-        var flightPlanCoordinates = {{ map }};
-        var flightPath = new google.maps.Polyline({
-          path: flightPlanCoordinates,
-          geodesic: true,
-          strokeColor: '#FF0000',
-          strokeOpacity: 1.0,
-          strokeWeight: 2
-        });
-
-        flightPath.setMap(map);
-      }
+            flightPath.setMap(map);
+        }
     </script>
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeZTqGegXOWEH6-f9OMVSZHZScVy2LDB4&callback=initMap">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeZTqGegXOWEH6-f9OMVSZHZScVy2LDB4&callback=initMap">
     </script>
-  </body>
-</html>
+</body>
+
+</html
