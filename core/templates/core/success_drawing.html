@@ -25,6 +25,10 @@
             var startpoint = {lat: 11.504037, lng: 104.883372}
             var center = {lat: 11.5040,lng: 104.8912}
             var endpoint = {lat: 11.514581,lng: 104.890025}
+            
+            {% comment %} var startpoint = {lat: {{lat_s}}, lng:{{lng_s}}}
+            var center = {lat: {{lat_s}}, lng:{{lng_s}}}
+            var endpoint = {lat: {{lat_e}}, lng:{{lng_e}}} {% endcomment %}
 
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 14,

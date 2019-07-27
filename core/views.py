@@ -93,10 +93,17 @@ def test_api(request):
     new_data = fullStr
     # print(new_data)
 
+    start_point = json_data['waypoints'][0]
+    end_point = json_data['waypoints'][1]
+
     # offer data
 >>>>>>> d78d56b7d0ed6c9313be0806769fcc64725038d2
     context={
-        'map':new_data
+        'map':new_data,
+        'lat_s':start_point['location'][0],
+        'lng_s':start_point['location'][1],
+        'lat_e':end_point['location'][0],
+        'lng_e':end_point['location'][1],
     }
     return render(request, 'core/success_drawing.html',context)
 
@@ -132,8 +139,15 @@ class LinkRequest:
             maneuver = step['maneuver']
         fullStr = ','.join(new_data) # convert list to string
         new_data = fullStr
+
+        way_route = []
+        way_loc = json_data['waypoints']
+
+        print(way_route)
+
         # offer data
         context={
+            'dicrect':way_route,
             'map':new_data
         }
         return render(self, 'core/success_drawing.html',context)
