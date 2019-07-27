@@ -63,21 +63,22 @@ def request_to_api(request):
 
 #just test draw map
 def test_api(request):
-    request_from = '104.8834,11.504'    # lng, lat
-    request_end = '104.8912,11.5684'  # lng, lat
-    response = requests.get('https://routing.openstreetmap.de/routed-bike/route/v1/driving/'+request_from+';'+request_end+'?overview=false&geometries=polyline&steps=true')
-    # response = requests.get("http://localhost/py/data/general.json")
+    request_from = '104.8912,11.5684'    # lng, lat
+    request_end = '104.8834,11.504'  # lng, lat
+    route = ["routed-bike","routed-car"]
+    response = requests.get('https://routing.openstreetmap.de/'+route[0]+'/route/v1/driving/'+request_from+';'+request_end+'?overview=false&geometries=polyline&steps=true')
+    # response = requests.get("https://routing.openstreetmap.de/routed-car/route/v1/driving/104.8912,11.5684;104.8834,11.504?overview=false&geometries=polyline&steps=true")
     response.close()
     json_data = response.json()
     steps = json_data['routes'][0]['legs'][0]['steps']
     waypoints = json_data['waypoints']
     # define step routes
     start_point = json_data['waypoints'][0]
-    lat_s = start_point['location'][0]
-    lng_s = start_point['location'][1]
+    lat_s = start_point['location'][1]
+    lng_s = start_point['location'][0]
     end_point = json_data['waypoints'][1]
-    lat_e = end_point['location'][0]
-    lng_e = end_point['location'][1]
+    lat_e = end_point['location'][1]
+    lng_e = end_point['location'][0]
     new_data = []
     for step in steps:
         intersections = step['intersections']
