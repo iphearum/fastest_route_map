@@ -13,3 +13,5 @@ $ python manage.py migrate
 $ python manage.py runserver
 
 API google key: AIzaSyCtmW37LvaY_hYcGTLNe86ZBD5g9ntdXWg
+
+traffic: https://developer.here.com/documentation/maps/topics/traffic.html

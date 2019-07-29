@@ -68,6 +68,8 @@ def test_api(request):
     route = ["routed-bike","routed-car"]
     response = requests.get('https://routing.openstreetmap.de/'+route[0]+'/route/v1/driving/'+request_from+';'+request_end+'?overview=false&geometries=polyline&steps=true')
     # response = requests.get("https://routing.openstreetmap.de/routed-car/route/v1/driving/104.8912,11.5684;104.8834,11.504?overview=false&geometries=polyline&steps=true")
+    # response = requests.get("https://api.openrouteservice.org/v2/directions/cycling-road?api_key=5b3ce3597851110001cf624878418d2388b344e4a0036d25d0581bc1&start=104.883438,11.504154&end=104.891045,11.568393")
+    
     response.close()
     json_data = response.json()
     steps = json_data['routes'][0]['legs'][0]['steps']
