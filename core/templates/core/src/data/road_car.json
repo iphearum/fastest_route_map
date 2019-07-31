@@ -1,1070 +1,645 @@
 {
-    "type": "FeatureCollection",
-    "features": [
+    "code": "Ok",
+    "routes": [
         {
-            "bbox": [
-                104.883024,
-                11.504037,
-                104.89174,
-                11.568364
+            "legs": [
+                {
+                    "steps": [
+                        {
+                            "intersections": [
+                                {
+                                    "out": 0,
+                                    "entry": [
+                                        true
+                                    ],
+                                    "bearings": [
+                                        271
+                                    ],
+                                    "location": [
+                                        104.898703,
+                                        11.524206
+                                    ]
+                                }
+                            ],
+                            "driving_side": "right",
+                            "geometry": "iyieA{_g_SAfF",
+                            "mode": "driving",
+                            "duration": 20.2,
+                            "maneuver": {
+                                "bearing_after": 271,
+                                "type": "depart",
+                                "modifier": "left",
+                                "bearing_before": 0,
+                                "location": [
+                                    104.898703,
+                                    11.524206
+                                ]
+                            },
+                            "weight": 20.2,
+                            "distance": 127.1,
+                            "name": ""
+                        },
+                        {
+                            "intersections": [
+                                {
+                                    "out": 0,
+                                    "location": [
+                                        104.897537,
+                                        11.524221
+                                    ],
+                                    "bearings": [
+                                        0,
+                                        90,
+                                        180
+                                    ],
+                                    "entry": [
+                                        true,
+                                        false,
+                                        true
+                                    ],
+                                    "in": 1
+                                },
+                                {
+                                    "out": 0,
+                                    "location": [
+                                        104.897508,
+                                        11.526977
+                                    ],
+                                    "bearings": [
+                                        0,
+                                        90,
+                                        180
+                                    ],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false
+                                    ],
+                                    "in": 2
+                                },
+                                {
+                                    "out": 0,
+                                    "location": [
+                                        104.897496,
+                                        11.528663
+                                    ],
+                                    "bearings": [
+                                        0,
+                                        90,
+                                        180,
+                                        270
+                                    ],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false,
+                                        true
+                                    ],
+                                    "in": 2
+                                },
+                                {
+                                    "out": 0,
+                                    "location": [
+                                        104.897551,
+                                        11.529221
+                                    ],
+                                    "bearings": [
+                                        0,
+                                        180,
+                                        270
+                                    ],
+                                    "entry": [
+                                        true,
+                                        false,
+                                        true
+                                    ],
+                                    "in": 1
+                                },
+                                {
+                                    "out": 0,
+                                    "location": [
+                                        104.897598,
+                                        11.530254
+                                    ],
+                                    "bearings": [
+                                        0,
+                                        90,
+                                        180,
+                                        285
+                                    ],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false,
+                                        true
+                                    ],
+                                    "in": 2
+                                },
+                                {
+                                    "out": 0,
+                                    "location": [
+                                        104.897588,
+                                        11.53059
+                                    ],
+                                    "bearings": [
+                                        0,
+                                        90,
+                                        180
+                                    ],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false
+                                    ],
+                                    "in": 2
+                                },
+                                {
+                                    "out": 0,
+                                    "location": [
+                                        104.897572,
+                                        11.531121
+                                    ],
+                                    "bearings": [
+                                        0,
+                                        90,
+                                        180,
+                                        270
+                                    ],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false,
+                                        true
+                                    ],
+                                    "in": 2
+                                },
+                                {
+                                    "out": 1,
+                                    "location": [
+                                        104.899255,
+                                        11.532128
+                                    ],
+                                    "bearings": [
+                                        0,
+                                        90,
+                                        285
+                                    ],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false
+                                    ],
+                                    "in": 2
+                                },
+                                {
+                                    "out": 1,
+                                    "location": [
+                                        104.900359,
+                                        11.532023
+                                    ],
+                                    "bearings": [
+                                        0,
+                                        90,
+                                        270
+                                    ],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false
+                                    ],
+                                    "in": 2
+                                },
+                                {
+                                    "out": 0,
+                                    "location": [
+                                        104.900819,
+                                        11.533015
+                                    ],
+                                    "bearings": [
+                                        15,
+                                        90,
+                                        195
+                                    ],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false
+                                    ],
+                                    "in": 2
+                                },
+                                {
+                                    "out": 0,
+                                    "location": [
+                                        104.900871,
+                                        11.533309
+                                    ],
+                                    "bearings": [
+                                        15,
+                                        195,
+                                        285
+                                    ],
+                                    "entry": [
+                                        true,
+                                        false,
+                                        true
+                                    ],
+                                    "in": 1
+                                },
+                                {
+                                    "out": 0,
+                                    "location": [
+                                        104.900931,
+                                        11.533654
+                                    ],
+                                    "bearings": [
+                                        15,
+                                        195,
+                                        270
+                                    ],
+                                    "entry": [
+                                        true,
+                                        false,
+                                        true
+                                    ],
+                                    "in": 1
+                                }
+                            ],
+                            "driving_side": "right",
+                            "geometry": "kyieAsxf_SqB?wD?m@?uAByB@gA@}A?I?g@@gA@o@CoBI[AqDGcA@iBBu@DUJWTa@Tg@@]?DUTmBb@gDEKGEo@CEEAIF_ABk@DcAJkB@a@?ECEuB_@oAMy@IcAKYCOKSCOA_@CSAE@C@",
+                            "mode": "driving",
+                            "duration": 153.2,
+                            "maneuver": {
+                                "bearing_after": 358,
+                                "type": "turn",
+                                "modifier": "right",
+                                "bearing_before": 270,
+                                "location": [
+                                    104.897537,
+                                    11.524221
+                                ]
+                            },
+                            "weight": 153.2,
+                            "distance": 1554.8,
+                            "name": "ផ្លូវ ៧៧BT"
+                        },
+                        {
+                            "intersections": [
+                                {
+                                    "out": 2,
+                                    "location": [
+                                        104.901048,
+                                        11.534349
+                                    ],
+                                    "bearings": [
+                                        0,
+                                        180,
+                                        270
+                                    ],
+                                    "entry": [
+                                        true,
+                                        false,
+                                        true
+                                    ],
+                                    "in": 1
+                                }
+                            ],
+                            "driving_side": "right",
+                            "geometry": "uxkeAqng_SAJAJ?VAPAD",
+                            "mode": "driving",
+                            "duration": 4,
+                            "maneuver": {
+                                "bearing_after": 277,
+                                "type": "continue",
+                                "modifier": "left",
+                                "bearing_before": 0,
+                                "location": [
+                                    104.901048,
+                                    11.534349
+                                ]
+                            },
+                            "weight": 4,
+                            "distance": 39,
+                            "name": "ផ្លូវ ៧៧BT"
+                        },
+                        {
+                            "intersections": [
+                                {
+                                    "out": 2,
+                                    "location": [
+                                        104.900693,
+                                        11.534392
+                                    ],
+                                    "bearings": [
+                                        90,
+                                        180,
+                                        345
+                                    ],
+                                    "entry": [
+                                        false,
+                                        true,
+                                        true
+                                    ],
+                                    "in": 0
+                                },
+                                {
+                                    "out": 0,
+                                    "location": [
+                                        104.900919,
+                                        11.53577
+                                    ],
+                                    "bearings": [
+                                        15,
+                                        90,
+                                        195,
+                                        270
+                                    ],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false,
+                                        true
+                                    ],
+                                    "in": 2
+                                },
+                                {
+                                    "out": 0,
+                                    "location": [
+                                        104.901007,
+                                        11.536225
+                                    ],
+                                    "bearings": [
+                                        15,
+                                        195,
+                                        270
+                                    ],
+                                    "entry": [
+                                        true,
+                                        false,
+                                        true
+                                    ],
+                                    "in": 1
+                                }
+                            ],
+                            "driving_side": "right",
+                            "geometry": "}xkeAilg_SCBG?I?u@K_AIgC[{AQyAQ_AYaBeAyHgG",
+                            "mode": "driving",
+                            "duration": 58.6,
+                            "maneuver": {
+                                "bearing_after": 343,
+                                "type": "continue",
+                                "modifier": "right",
+                                "bearing_before": 277,
+                                "location": [
+                                    104.900693,
+                                    11.534392
+                                ]
+                            },
+                            "weight": 58.6,
+                            "distance": 591,
+                            "name": "ផ្លូវ ៧៧BT"
+                        },
+                        {
+                            "intersections": [
+                                {
+                                    "out": 3,
+                                    "location": [
+                                        104.902895,
+                                        11.539061
+                                    ],
+                                    "bearings": [
+                                        45,
+                                        135,
+                                        225,
+                                        315
+                                    ],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false,
+                                        true
+                                    ],
+                                    "in": 2
+                                }
+                            ],
+                            "driving_side": "right",
+                            "geometry": "cvleAczg_SeAzA",
+                            "mode": "driving",
+                            "duration": 10.9,
+                            "maneuver": {
+                                "bearing_after": 307,
+                                "type": "turn",
+                                "modifier": "left",
+                                "bearing_before": 39,
+                                "location": [
+                                    104.902895,
+                                    11.539061
+                                ]
+                            },
+                            "weight": 10.9,
+                            "distance": 62.5,
+                            "name": "ផ្លូវ ២០MC"
+                        },
+                        {
+                            "intersections": [
+                                {
+                                    "out": 1,
+                                    "location": [
+                                        104.902444,
+                                        11.539408
+                                    ],
+                                    "bearings": [
+                                        135,
+                                        225,
+                                        315
+                                    ],
+                                    "entry": [
+                                        false,
+                                        true,
+                                        true
+                                    ],
+                                    "in": 0
+                                }
+                            ],
+                            "driving_side": "right",
+                            "geometry": "ixleAgwg_SxAfA",
+                            "mode": "driving",
+                            "duration": 11.2,
+                            "maneuver": {
+                                "bearing_after": 217,
+                                "type": "turn",
+                                "modifier": "left",
+                                "bearing_before": 307,
+                                "location": [
+                                    104.902444,
+                                    11.539408
+                                ]
+                            },
+                            "weight": 11.2,
+                            "distance": 64,
+                            "name": ""
+                        },
+                        {
+                            "intersections": [
+                                {
+                                    "out": 2,
+                                    "location": [
+                                        104.902079,
+                                        11.538957
+                                    ],
+                                    "bearings": [
+                                        45,
+                                        225,
+                                        315
+                                    ],
+                                    "entry": [
+                                        false,
+                                        true,
+                                        true
+                                    ],
+                                    "in": 0
+                                }
+                            ],
+                            "driving_side": "right",
+                            "geometry": "ouleA_ug_SyGpJ",
+                            "mode": "driving",
+                            "duration": 39.9,
+                            "maneuver": {
+                                "bearing_after": 307,
+                                "type": "turn",
+                                "modifier": "right",
+                                "bearing_before": 217,
+                                "location": [
+                                    104.902079,
+                                    11.538957
+                                ]
+                            },
+                            "weight": 39.9,
+                            "distance": 255.4,
+                            "name": ""
+                        },
+                        {
+                            "intersections": [
+                                {
+                                    "out": 0,
+                                    "location": [
+                                        104.900233,
+                                        11.540371
+                                    ],
+                                    "bearings": [
+                                        45,
+                                        135,
+                                        225,
+                                        315
+                                    ],
+                                    "entry": [
+                                        true,
+                                        false,
+                                        true,
+                                        true
+                                    ],
+                                    "in": 1
+                                },
+                                {
+                                    "out": 0,
+                                    "location": [
+                                        104.900753,
+                                        11.540839
+                                    ],
+                                    "bearings": [
+                                        45,
+                                        135,
+                                        225,
+                                        300
+                                    ],
+                                    "entry": [
+                                        true,
+                                        true,
+                                        false,
+                                        true
+                                    ],
+                                    "in": 2
+                                }
+                            ],
+                            "driving_side": "right",
+                            "geometry": "i~leAmig_S}AgBs@m@",
+                            "mode": "driving",
+                            "duration": 10.4,
+                            "maneuver": {
+                                "bearing_after": 46,
+                                "type": "turn",
+                                "modifier": "right",
+                                "bearing_before": 307,
+                                "location": [
+                                    104.900233,
+                                    11.540371
+                                ]
+                            },
+                            "weight": 10.4,
+                            "distance": 115.6,
+                            "name": "ផ្លូវ ១០MC"
+                        },
+                        {
+                            "intersections": [
+                                {
+                                    "in": 0,
+                                    "entry": [
+                                        true
+                                    ],
+                                    "bearings": [
+                                        225
+                                    ],
+                                    "location": [
+                                        104.900983,
+                                        11.541103
+                                    ]
+                                }
+                            ],
+                            "driving_side": "right",
+                            "geometry": "{bmeAcng_S",
+                            "mode": "driving",
+                            "duration": 0,
+                            "maneuver": {
+                                "bearing_after": 0,
+                                "location": [
+                                    104.900983,
+                                    11.541103
+                                ],
+                                "bearing_before": 39,
+                                "type": "arrive"
+                            },
+                            "weight": 0,
+                            "distance": 0.9,
+                            "name": "ផ្លូវ ១០MC"
+                        }
+                    ],
+                    "distance": 2810.3,
+                    "duration": 308.4,
+                    "summary": "ផ្លូវ ៧៧BT, ផ្លូវ ២០MC",
+                    "weight": 308.4
+                }
             ],
-            "type": "Feature",
-            "properties": {
-                "segments": [
-                    {
-                        "distance": 8853.8,
-                        "duration": 1435.5,
-                        "steps": [
-                            {
-                                "distance": 12.5,
-                                "duration": 2.5,
-                                "type": 11,
-                                "instruction": "Head southwest",
-                                "name": "-",
-                                "way_points": [
-                                    0,
-                                    1
-                                ]
-                            },
-                            {
-                                "distance": 62.6,
-                                "duration": 12.5,
-                                "type": 1,
-                                "instruction": "Turn right",
-                                "name": "-",
-                                "way_points": [
-                                    1,
-                                    2
-                                ]
-                            },
-                            {
-                                "distance": 997.8,
-                                "duration": 149.7,
-                                "type": 1,
-                                "instruction": "Turn right onto ផ្លូវព្រៃស",
-                                "name": "ផ្លូវព្រៃស",
-                                "way_points": [
-                                    2,
-                                    23
-                                ]
-                            },
-                            {
-                                "distance": 2897.7,
-                                "duration": 474.2,
-                                "type": 0,
-                                "instruction": "Turn left onto ផ្លូវ ចំការដូង (២១៧), 20",
-                                "name": "ផ្លូវ ចំការដូង (២១៧), 20",
-                                "way_points": [
-                                    23,
-                                    71
-                                ]
-                            },
-                            {
-                                "distance": 102.9,
-                                "duration": 16.8,
-                                "type": 12,
-                                "instruction": "Keep left",
-                                "name": "-",
-                                "way_points": [
-                                    71,
-                                    75
-                                ]
-                            },
-                            {
-                                "distance": 246.2,
-                                "duration": 40.3,
-                                "type": 0,
-                                "instruction": "Turn left onto មហាវិថី វេង​ស្រេង",
-                                "name": "មហាវិថី វេង​ស្រេង",
-                                "way_points": [
-                                    75,
-                                    79
-                                ]
-                            },
-                            {
-                                "distance": 1588.8,
-                                "duration": 220.0,
-                                "type": 1,
-                                "instruction": "Turn right onto ផ្លូវ សឡា (៣៧១)",
-                                "name": "ផ្លូវ សឡា (៣៧១)",
-                                "way_points": [
-                                    79,
-                                    115
-                                ]
-                            },
-                            {
-                                "distance": 1082.0,
-                                "duration": 149.8,
-                                "type": 0,
-                                "instruction": "Turn left onto ផ្លូវ សឡា (៣៧១)",
-                                "name": "ផ្លូវ សឡា (៣៧១)",
-                                "way_points": [
-                                    115,
-                                    157
-                                ]
-                            },
-                            {
-                                "distance": 200.6,
-                                "duration": 27.8,
-                                "type": 1,
-                                "instruction": "Turn right onto ផ្លូវពីរពាន់ពីរ",
-                                "name": "ផ្លូវពីរពាន់ពីរ",
-                                "way_points": [
-                                    157,
-                                    162
-                                ]
-                            },
-                            {
-                                "distance": 652.5,
-                                "duration": 106.8,
-                                "type": 0,
-                                "instruction": "Turn left onto ផ្លូវ ២៧១",
-                                "name": "ផ្លូវ ២៧១",
-                                "way_points": [
-                                    162,
-                                    175
-                                ]
-                            },
-                            {
-                                "distance": 144.4,
-                                "duration": 20.0,
-                                "type": 13,
-                                "instruction": "Keep right",
-                                "name": "-",
-                                "way_points": [
-                                    175,
-                                    179
-                                ]
-                            },
-                            {
-                                "distance": 612.1,
-                                "duration": 122.4,
-                                "type": 0,
-                                "instruction": "Turn left onto ផ្លូវ ២៦៥",
-                                "name": "ផ្លូវ ២៦៥",
-                                "way_points": [
-                                    179,
-                                    198
-                                ]
-                            },
-                            {
-                                "distance": 78.8,
-                                "duration": 14.2,
-                                "type": 1,
-                                "instruction": "Turn right onto មហាវិថី សហព័ន្ធរុស្ស៊ី",
-                                "name": "មហាវិថី សហព័ន្ធរុស្ស៊ី",
-                                "way_points": [
-                                    198,
-                                    200
-                                ]
-                            },
-                            {
-                                "distance": 119.7,
-                                "duration": 53.9,
-                                "type": 0,
-                                "instruction": "Turn left",
-                                "name": "-",
-                                "way_points": [
-                                    200,
-                                    204
-                                ]
-                            },
-                            {
-                                "distance": 55.1,
-                                "duration": 24.8,
-                                "type": 0,
-                                "instruction": "Turn left",
-                                "name": "-",
-                                "way_points": [
-                                    204,
-                                    206
-                                ]
-                            },
-                            {
-                                "distance": 0.0,
-                                "duration": 0.0,
-                                "type": 10,
-                                "instruction": "Arrive at your destination, on the right",
-                                "name": "-",
-                                "way_points": [
-                                    206,
-                                    206
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "summary": {
-                    "distance": 8853.8,
-                    "duration": 1435.5
-                },
-                "way_points": [
-                    0,
-                    206
-                ]
-            },
-            "geometry": {
-                "coordinates": [
-                    [
-                        104.883473,
-                        11.504089
-                    ],
-                    [
-                        104.883372,
-                        11.504037
-                    ],
-                    [
-                        104.88311,
-                        11.504538
-                    ],
-                    [
-                        104.883454,
-                        11.504717
-                    ],
-                    [
-                        104.884064,
-                        11.505035
-                    ],
-                    [
-                        104.885548,
-                        11.505811
-                    ],
-                    [
-                        104.885714,
-                        11.505897
-                    ],
-                    [
-                        104.885958,
-                        11.506025
-                    ],
-                    [
-                        104.886057,
-                        11.506076
-                    ],
-                    [
-                        104.886367,
-                        11.50623
-                    ],
-                    [
-                        104.886634,
-                        11.506362
-                    ],
-                    [
-                        104.886746,
-                        11.506422
-                    ],
-                    [
-                        104.886868,
-                        11.506487
-                    ],
-                    [
-                        104.887384,
-                        11.506764
-                    ],
-                    [
-                        104.887583,
-                        11.506865
-                    ],
-                    [
-                        104.888047,
-                        11.5071
-                    ],
-                    [
-                        104.888537,
-                        11.507347
-                    ],
-                    [
-                        104.888781,
-                        11.507473
-                    ],
-                    [
-                        104.889474,
-                        11.507832
-                    ],
-                    [
-                        104.889791,
-                        11.507995
-                    ],
-                    [
-                        104.89015,
-                        11.508184
-                    ],
-                    [
-                        104.890493,
-                        11.508366
-                    ],
-                    [
-                        104.891107,
-                        11.508686
-                    ],
-                    [
-                        104.891212,
-                        11.508714
-                    ],
-                    [
-                        104.890909,
-                        11.51021
-                    ],
-                    [
-                        104.890815,
-                        11.510674
-                    ],
-                    [
-                        104.890777,
-                        11.510865
-                    ],
-                    [
-                        104.890451,
-                        11.512478
-                    ],
-                    [
-                        104.890355,
-                        11.51295
-                    ],
-                    [
-                        104.890264,
-                        11.513403
-                    ],
-                    [
-                        104.890185,
-                        11.513791
-                    ],
-                    [
-                        104.890153,
-                        11.513948
-                    ],
-                    [
-                        104.89014,
-                        11.514013
-                    ],
-                    [
-                        104.890019,
-                        11.514615
-                    ],
-                    [
-                        104.8898,
-                        11.515695
-                    ],
-                    [
-                        104.889702,
-                        11.516182
-                    ],
-                    [
-                        104.889603,
-                        11.516668
-                    ],
-                    [
-                        104.889473,
-                        11.517313
-                    ],
-                    [
-                        104.889187,
-                        11.518728
-                    ],
-                    [
-                        104.889157,
-                        11.518877
-                    ],
-                    [
-                        104.888852,
-                        11.520383
-                    ],
-                    [
-                        104.888796,
-                        11.520659
-                    ],
-                    [
-                        104.888776,
-                        11.520757
-                    ],
-                    [
-                        104.888689,
-                        11.521187
-                    ],
-                    [
-                        104.888608,
-                        11.521592
-                    ],
-                    [
-                        104.888547,
-                        11.52189
-                    ],
-                    [
-                        104.888458,
-                        11.52233
-                    ],
-                    [
-                        104.888335,
-                        11.522941
-                    ],
-                    [
-                        104.888252,
-                        11.523351
-                    ],
-                    [
-                        104.888209,
-                        11.523566
-                    ],
-                    [
-                        104.888157,
-                        11.523819
-                    ],
-                    [
-                        104.887951,
-                        11.524837
-                    ],
-                    [
-                        104.887848,
-                        11.52535
-                    ],
-                    [
-                        104.887791,
-                        11.525642
-                    ],
-                    [
-                        104.887756,
-                        11.525797
-                    ],
-                    [
-                        104.887569,
-                        11.526667
-                    ],
-                    [
-                        104.887379,
-                        11.527618
-                    ],
-                    [
-                        104.887191,
-                        11.528534
-                    ],
-                    [
-                        104.887144,
-                        11.528754
-                    ],
-                    [
-                        104.887091,
-                        11.529017
-                    ],
-                    [
-                        104.887059,
-                        11.529179
-                    ],
-                    [
-                        104.886972,
-                        11.529617
-                    ],
-                    [
-                        104.886901,
-                        11.529946
-                    ],
-                    [
-                        104.886712,
-                        11.530939
-                    ],
-                    [
-                        104.886483,
-                        11.532078
-                    ],
-                    [
-                        104.886353,
-                        11.532742
-                    ],
-                    [
-                        104.886262,
-                        11.533203
-                    ],
-                    [
-                        104.886234,
-                        11.533332
-                    ],
-                    [
-                        104.886228,
-                        11.533366
-                    ],
-                    [
-                        104.886206,
-                        11.533477
-                    ],
-                    [
-                        104.88608,
-                        11.534098
-                    ],
-                    [
-                        104.885981,
-                        11.534252
-                    ],
-                    [
-                        104.885843,
-                        11.534423
-                    ],
-                    [
-                        104.885702,
-                        11.534552
-                    ],
-                    [
-                        104.885364,
-                        11.534743
-                    ],
-                    [
-                        104.885272,
-                        11.534845
-                    ],
-                    [
-                        104.885189,
-                        11.5348
-                    ],
-                    [
-                        104.885097,
-                        11.534778
-                    ],
-                    [
-                        104.884707,
-                        11.534717
-                    ],
-                    [
-                        104.883047,
-                        11.534491
-                    ],
-                    [
-                        104.883041,
-                        11.534736
-                    ],
-                    [
-                        104.883024,
-                        11.535624
-                    ],
-                    [
-                        104.883038,
-                        11.536002
-                    ],
-                    [
-                        104.883041,
-                        11.536087
-                    ],
-                    [
-                        104.883056,
-                        11.536511
-                    ],
-                    [
-                        104.883066,
-                        11.536765
-                    ],
-                    [
-                        104.883073,
-                        11.536961
-                    ],
-                    [
-                        104.883083,
-                        11.537231
-                    ],
-                    [
-                        104.883096,
-                        11.537649
-                    ],
-                    [
-                        104.8831,
-                        11.537695
-                    ],
-                    [
-                        104.883105,
-                        11.53784
-                    ],
-                    [
-                        104.88312,
-                        11.538156
-                    ],
-                    [
-                        104.883179,
-                        11.539429
-                    ],
-                    [
-                        104.883201,
-                        11.539894
-                    ],
-                    [
-                        104.883245,
-                        11.540579
-                    ],
-                    [
-                        104.883325,
-                        11.541825
-                    ],
-                    [
-                        104.883361,
-                        11.542383
-                    ],
-                    [
-                        104.883379,
-                        11.542677
-                    ],
-                    [
-                        104.883413,
-                        11.543202
-                    ],
-                    [
-                        104.883451,
-                        11.543808
-                    ],
-                    [
-                        104.883455,
-                        11.543874
-                    ],
-                    [
-                        104.883474,
-                        11.544346
-                    ],
-                    [
-                        104.883492,
-                        11.54476
-                    ],
-                    [
-                        104.883495,
-                        11.544848
-                    ],
-                    [
-                        104.883521,
-                        11.54527
-                    ],
-                    [
-                        104.883522,
-                        11.545405
-                    ],
-                    [
-                        104.883524,
-                        11.545709
-                    ],
-                    [
-                        104.883548,
-                        11.546232
-                    ],
-                    [
-                        104.883596,
-                        11.546638
-                    ],
-                    [
-                        104.883613,
-                        11.546782
-                    ],
-                    [
-                        104.88369,
-                        11.546896
-                    ],
-                    [
-                        104.883801,
-                        11.546976
-                    ],
-                    [
-                        104.88405,
-                        11.547026
-                    ],
-                    [
-                        104.884594,
-                        11.547147
-                    ],
-                    [
-                        104.885061,
-                        11.547389
-                    ],
-                    [
-                        104.885387,
-                        11.54762
-                    ],
-                    [
-                        104.885371,
-                        11.547706
-                    ],
-                    [
-                        104.885362,
-                        11.547884
-                    ],
-                    [
-                        104.885324,
-                        11.548023
-                    ],
-                    [
-                        104.88529,
-                        11.54818
-                    ],
-                    [
-                        104.885279,
-                        11.548497
-                    ],
-                    [
-                        104.885291,
-                        11.548583
-                    ],
-                    [
-                        104.88531,
-                        11.548624
-                    ],
-                    [
-                        104.885352,
-                        11.548647
-                    ],
-                    [
-                        104.885503,
-                        11.548684
-                    ],
-                    [
-                        104.88572,
-                        11.548713
-                    ],
-                    [
-                        104.885933,
-                        11.548756
-                    ],
-                    [
-                        104.88603,
-                        11.548819
-                    ],
-                    [
-                        104.886055,
-                        11.548909
-                    ],
-                    [
-                        104.88602,
-                        11.549159
-                    ],
-                    [
-                        104.885962,
-                        11.549484
-                    ],
-                    [
-                        104.885905,
-                        11.549798
-                    ],
-                    [
-                        104.885901,
-                        11.549822
-                    ],
-                    [
-                        104.88585,
-                        11.550105
-                    ],
-                    [
-                        104.88579,
-                        11.550442
-                    ],
-                    [
-                        104.885767,
-                        11.550567
-                    ],
-                    [
-                        104.885732,
-                        11.550764
-                    ],
-                    [
-                        104.88568,
-                        11.551056
-                    ],
-                    [
-                        104.885675,
-                        11.55109
-                    ],
-                    [
-                        104.885594,
-                        11.551545
-                    ],
-                    [
-                        104.885516,
-                        11.551989
-                    ],
-                    [
-                        104.885466,
-                        11.552274
-                    ],
-                    [
-                        104.885438,
-                        11.552431
-                    ],
-                    [
-                        104.885432,
-                        11.552463
-                    ],
-                    [
-                        104.885349,
-                        11.552933
-                    ],
-                    [
-                        104.885317,
-                        11.5531
-                    ],
-                    [
-                        104.8853,
-                        11.553209
-                    ],
-                    [
-                        104.885267,
-                        11.553372
-                    ],
-                    [
-                        104.885223,
-                        11.553728
-                    ],
-                    [
-                        104.885181,
-                        11.554062
-                    ],
-                    [
-                        104.885177,
-                        11.554097
-                    ],
-                    [
-                        104.88515,
-                        11.55431
-                    ],
-                    [
-                        104.885133,
-                        11.554451
-                    ],
-                    [
-                        104.885137,
-                        11.55459
-                    ],
-                    [
-                        104.885141,
-                        11.554695
-                    ],
-                    [
-                        104.885155,
-                        11.555163
-                    ],
-                    [
-                        104.885166,
-                        11.55556
-                    ],
-                    [
-                        104.885196,
-                        11.556711
-                    ],
-                    [
-                        104.885305,
-                        11.556709
-                    ],
-                    [
-                        104.886299,
-                        11.556695
-                    ],
-                    [
-                        104.886374,
-                        11.556693
-                    ],
-                    [
-                        104.886951,
-                        11.556674
-                    ],
-                    [
-                        104.887035,
-                        11.556659
-                    ],
-                    [
-                        104.887121,
-                        11.556895
-                    ],
-                    [
-                        104.887446,
-                        11.557831
-                    ],
-                    [
-                        104.887665,
-                        11.5583
-                    ],
-                    [
-                        104.887915,
-                        11.5587
-                    ],
-                    [
-                        104.88815,
-                        11.559038
-                    ],
-                    [
-                        104.888165,
-                        11.559068
-                    ],
-                    [
-                        104.888403,
-                        11.559407
-                    ],
-                    [
-                        104.888664,
-                        11.55971
-                    ],
-                    [
-                        104.888987,
-                        11.560035
-                    ],
-                    [
-                        104.889305,
-                        11.560344
-                    ],
-                    [
-                        104.889784,
-                        11.560811
-                    ],
-                    [
-                        104.890327,
-                        11.561354
-                    ],
-                    [
-                        104.89038,
-                        11.561413
-                    ],
-                    [
-                        104.890513,
-                        11.561454
-                    ],
-                    [
-                        104.89065,
-                        11.561481
-                    ],
-                    [
-                        104.891054,
-                        11.561523
-                    ],
-                    [
-                        104.891691,
-                        11.56159
-                    ],
-                    [
-                        104.891617,
-                        11.562237
-                    ],
-                    [
-                        104.891579,
-                        11.562563
-                    ],
-                    [
-                        104.891542,
-                        11.562888
-                    ],
-                    [
-                        104.891503,
-                        11.563222
-                    ],
-                    [
-                        104.891468,
-                        11.563527
-                    ],
-                    [
-                        104.891431,
-                        11.563853
-                    ],
-                    [
-                        104.891402,
-                        11.564105
-                    ],
-                    [
-                        104.891393,
-                        11.56418
-                    ],
-                    [
-                        104.891356,
-                        11.564499
-                    ],
-                    [
-                        104.891348,
-                        11.564569
-                    ],
-                    [
-                        104.891318,
-                        11.564833
-                    ],
-                    [
-                        104.891281,
-                        11.565151
-                    ],
-                    [
-                        104.891279,
-                        11.565173
-                    ],
-                    [
-                        104.891245,
-                        11.565463
-                    ],
-                    [
-                        104.891177,
-                        11.566057
-                    ],
-                    [
-                        104.891164,
-                        11.566171
-                    ],
-                    [
-                        104.891132,
-                        11.566445
-                    ],
-                    [
-                        104.891097,
-                        11.566748
-                    ],
-                    [
-                        104.891061,
-                        11.56706
-                    ],
-                    [
-                        104.891526,
-                        11.567227
-                    ],
-                    [
-                        104.89174,
-                        11.567305
-                    ],
-                    [
-                        104.891703,
-                        11.567394
-                    ],
-                    [
-                        104.891618,
-                        11.567915
-                    ],
-                    [
-                        104.891593,
-                        11.568105
-                    ],
-                    [
-                        104.891559,
-                        11.568364
-                    ],
-                    [
-                        104.891335,
-                        11.568328
-                    ],
-                    [
-                        104.891058,
-                        11.568293
-                    ]
-                ],
-                "type": "LineString"
-            }
+            "distance": 2810.3,
+            "duration": 308.4,
+            "weight_name": "routability",
+            "weight": 308.4
         }
     ],
-    "bbox": [
-        104.883024,
-        11.504037,
-        104.89174,
-        11.568364
-    ],
-    "metadata": {
-        "attribution": "openrouteservice.org | OpenStreetMap contributors",
-        "service": "routing",
-        "timestamp": 1564391764864,
-        "query": {
-            "coordinates": [
-                [
-                    104.883438,
-                    11.504154
-                ],
-                [
-                    104.891045,
-                    11.568393
-                ]
-            ],
-            "profile": "cycling-road",
-            "format": "json"
+    "waypoints": [
+        {
+            "hint": "6WwOibZtDom2AAAAEQAAAAAAAAAAAAAA92v-QpQLMkEAAAAAAAAAALYAAAARAAAAAAAAAAAAAACyFwEAj6BABm7YrwCMoEAGoNevAAAArwXw9Po9",
+            "name": "",
+            "location": [
+                104.898703,
+                11.524206
+            ]
         },
-        "engine": {
-            "version": "5.0.1",
-            "build_date": "2019-05-29T15:15:42Z"
+        {
+            "hint": "_vcOiQX4DokAAAAABgAAAAAAAAAAAAAA8aBuP5fAuEAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAACyFwEAfalABnUasACIqUAGbBqwAAAAjwLw9Po9",
+            "name": "ផ្លូវ ១០MC",
+            "location": [
+                104.900989,
+                11.541109
+            ]
         }
-    }
+    ]
 }
