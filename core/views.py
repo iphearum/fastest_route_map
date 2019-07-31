@@ -2,7 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.conf import settings
 from urllib.request import urlopen
-import requests,json
+from time import strftime,gmtime
+import requests,json, datetime
 
 # view_request
 # view page request
@@ -63,13 +64,34 @@ def request_to_api(request):
 
 #just test draw map
 def test_api(request):
-    request_from = '104.8912,11.5684'    # lng, lat
-    request_end = '104.8834,11.504'  # lng, lat
+    request_start_lat = '11.5280'  # lng, lat
+    request_start_lng = '104.9248'  # lng, lat
+    request_end_lat = '11.5654'    # lng, lat
+    request_end_lng = '104.8998'    # lng, lat
     route = ["routed-bike","routed-car"]
-    response = requests.get('https://routing.openstreetmap.de/'+route[0]+'/route/v1/driving/'+request_from+';'+request_end+'?overview=false&geometries=polyline&steps=true')
+    response_bike = requests.get('https://routing.openstreetmap.de/'+route[0]+'/route/v1/driving/'+request_start_lng+','+request_start_lat+';'+request_end_lng+','+request_end_lat+'?overview=false&geometries=polyline&steps=true')
+    response_car = requests.get('https://routing.openstreetmap.de/'+route[1]+'/route/v1/driving/'+request_start_lng+','+request_start_lat+';'+request_end_lng+','+request_end_lat+'?overview=false&geometries=polyline&steps=true')
     # response = requests.get("https://routing.openstreetmap.de/routed-car/route/v1/driving/104.8912,11.5684;104.8834,11.504?overview=false&geometries=polyline&steps=true")
-    response.close()
-    json_data = response.json()
+    # response = requests.get("https://api.openrouteservice.org/v2/directions/cycling-road?api_key=5b3ce3597851110001cf624878418d2388b344e4a0036d25d0581bc1&start=104.883438,11.504154&end=104.891045,11.568393")
+    json_data_car = response_car.json()
+    json_data_bike = response_bike.json()
+    response_car.close()
+    response_bike.close()
+
+    distance_car = json_data_car['routes'][0]['distance']
+    duration_car = json_data_car['routes'][0]['duration']
+    distance_bike = json_data_bike['routes'][0]['distance']
+    duration_bike = json_data_bike['routes'][0]['duration']
+    if (duration_car*4.07) <= duration_bike:
+        json_data = json_data_car
+        distance = distance_car/1000
+        duration = strftime("%Hh:%Mm:%Ss", gmtime(duration_car))
+    else:
+        json_data = json_data_bike
+        distance = distance_bike/1000
+        duration = strftime("%Hh:%Mm:%Ss", gmtime(duration_bike))
+
+
     steps = json_data['routes'][0]['legs'][0]['steps']
     waypoints = json_data['waypoints']
     # define step routes
@@ -83,12 +105,11 @@ def test_api(request):
     for step in steps:
         intersections = step['intersections']
         for intersection in intersections:
+            # durations +=intersection['duration']
             locations = intersection['location']
-            for location in locations:
-                lat=location
-                for location in locations:
-                    if location != lat:
-                        lng = location
+            for x in range(0,1):
+                lng=locations[0]
+                lat=locations[1]
             new_data.append('{lat:'+str(lat)+',lng:'+str(lng)+'}')
     fullStr = ','.join(new_data) # convert list to string
     # new_data = a+fullStr+b #new data is a string
@@ -98,6 +119,8 @@ def test_api(request):
     # offer data
 # >>>>>>> d78d56b7d0ed6c9313be0806769fcc64725038d2
     context={
+        'distance':distance,
+        'duration':duration,
         'dicrect':way_route,
         'map':new_data,
         'lat_s':lat_s,

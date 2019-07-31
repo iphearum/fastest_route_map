@@ -11,6 +11,11 @@
             width: 100%;
             margin: 0px;
             /* transform: translate(0%,0%) */
+            position:absolute;
+            right:0px;
+            margin-right:0px;
+            height: 60%;
+            width:60%;
         }
         html,
         body {
@@ -19,6 +24,9 @@
             padding: 0;
         }
     </style>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeZTqGegXOWEH6-f9OMVSZHZScVy2LDB4&callback=initMap">
+    {% comment %} <script async defer src="https://maps.googleapis.com/maps/api/jsjs?v=3.exp&sensor=false"> {% endcomment %}
+    </script>
 </head>
 
 <body>
@@ -32,13 +40,22 @@
     </div>
     <script>
         function initMap() {
-
+    <div>
+        <div style="position:absolute">
+            <b>Distance: {{distance}}</b>km <br/>
+            <b>Duration: {{duration}}</b>
+        </div>
+        <div id="map"></div>
+    </div>
+    <script>
+        function initMap() {
             var startpoint = {lat:{{lat_s}},lng:{{lng_s}}}
-            var center = {lat:{{lat_e}},lng:{{lng_s}}}
             var endpoint = {lat:{{lat_e}},lng:{{lng_e}}}
+            var center = {lat:(startpoint.lat+endpoint.lat)/2,lng:(startpoint.lng+endpoint.lng)/2}
+
 
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 13,
+                zoom: 12,
                 center: center,
                 mapTypeId: 'terrain',
             });
@@ -66,8 +83,6 @@
             flightPath.setMap(map);
         }
     </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeZTqGegXOWEH6-f9OMVSZHZScVy2LDB4&callback=initMap">
-    </script>
 </body>
 
-</html
+</html>
