@@ -8,6 +8,9 @@
     <style>
         #map {
             height: 100%;
+            width: 100%;
+            margin: 0px;
+            /* transform: translate(0%,0%) */
         }
         html,
         body {
@@ -19,12 +22,16 @@
 </head>
 
 <body>
-    <div id="map"></div>
+    <div style="border: 1px solid gray;padding:10px;height: 50%;width: 60%;position: absolute;top: 0px;right: 0px;">
+        <div id="map"></div>
+        <div id="floating-panel">
+                <input onclick="clearMarkers();" type=button value="Hide Markers">
+                <input onclick="showMarkers();" type=button value="Show All Markers">
+                <input onclick="deleteMarkers();" type=button value="Delete Markers">
+            </div>
+    </div>
     <script>
         function initMap() {
-             {% comment %} var startpoint = {lat: 11.504037, lng: 104.883372}
-            var center = {lat: 11.5040,lng: 104.8912}
-            var endpoint = {lat: 11.514581,lng: 104.890025} {% endcomment %}
 
             var startpoint = {lat:{{lat_s}},lng:{{lng_s}}}
             var center = {lat:{{lat_e}},lng:{{lng_s}}}
