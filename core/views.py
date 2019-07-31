@@ -112,10 +112,12 @@ def test_api(request):
                 lat=locations[1]
             new_data.append('{lat:'+str(lat)+',lng:'+str(lng)+'}')
     fullStr = ','.join(new_data) # convert list to string
+    # new_data = a+fullStr+b #new data is a string
     new_data = fullStr
     # print(new_data)
 
     # offer data
+# >>>>>>> d78d56b7d0ed6c9313be0806769fcc64725038d2
     context={
         'distance':distance,
         'duration':duration,

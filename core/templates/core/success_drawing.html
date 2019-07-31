@@ -7,6 +7,10 @@
     <title>Simple Polylines</title>
     <style>
         #map {
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+            /* transform: translate(0%,0%) */
             position:absolute;
             right:0px;
             margin-right:0px;
@@ -26,6 +30,16 @@
 </head>
 
 <body>
+    <div style="border: 1px solid gray;padding:10px;height: 50%;width: 60%;position: absolute;top: 0px;right: 0px;">
+        <div id="map"></div>
+        <div id="floating-panel">
+                <input onclick="clearMarkers();" type=button value="Hide Markers">
+                <input onclick="showMarkers();" type=button value="Show All Markers">
+                <input onclick="deleteMarkers();" type=button value="Delete Markers">
+            </div>
+    </div>
+    <script>
+        function initMap() {
     <div>
         <div style="position:absolute">
             <b>Distance: {{distance}}</b>km <br/>
