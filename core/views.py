@@ -105,7 +105,6 @@ def test_api(request):
     for step in steps:
         intersections = step['intersections']
         for intersection in intersections:
-            # durations +=intersection['duration']
             locations = intersection['location']
             for x in range(0,1):
                 lng=locations[0]

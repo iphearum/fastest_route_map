@@ -40,6 +40,7 @@ insert_start = [
 	[104.869783, 11.562741],
 	[104.870274, 11.562725],
 	[104.870819, 11.562708],
+
 	[104.870749, 11.561871],
 	[104.870677, 11.56103],
 	[104.870637, 11.560516],
@@ -49,34 +50,38 @@ insert_start = [
 num_s=len(insert_start)-1
 index_e = insert_start[num_s][0]
 count_location = 0
-
+pointer = insert_start[0][0]
 final_data = []
 # print(steps[2]['intersections'][0]['location'])
 for step in steps:
 	intersections = step['intersections']
 	for intersection in intersections:
 		locations = intersection['location']
-		if locations[0]<insert_start[0][0]<insert_start[num_s][0]:
+		# print('{lat:',locations[0],',lng:',locations[1],'},')
+		while locations[0]<pointer:
 			final_data.append(locations)
 			count_location = count_location+1
+			pointer = locations[0]
 			# insert start
-		elif insert_start[0][0]<locations[0]<insert_start[num_s][0]:
-			final_data.append(insert_start)
-			insert_count=insert_count+num_s
-			#insert end
-		elif locations[0]>insert_start[num_s][0]:
+for x in range(0,len(insert_start)):
+	if insert_start[x][0]>pointer<insert_start[num_s][0]:
+		final_data.append(insert_start[x])
+		pointer = insert_start[x][0]
+		insert_count=insert_count+1
+		# print(pointer,x)
+		#insert end
+for step in steps:
+	intersections = step['intersections']
+	for intersection in intersections:
+		while locations[0]>pointer:
 			final_data.append(locations)
+			pointer = locations[0]
 			count_location = count_location+1
-# print(insert_start[insert_count])
+
+
+# print(locations)
 print(final_data)
-		# print(locations)
 intersection_count = intersection_count+1
-
-
-
-
-
-
 
 
 print('Items :',len(durations),'[***] length intersections :',intersection_count,'[***] Location :',count_location)
